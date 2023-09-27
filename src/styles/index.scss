@@ -1,0 +1,272 @@
+@import "reset.scss";
+@import "mixin.scss";
+
+$boarder:rgb(180, 180, 180);
+
+.wrapper{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+nav{
+    background-color: rgba(255, 255, 255, 0.689);
+    border-bottom: 1px solid $boarder;
+    margin-bottom: 5px;
+    .container{
+        @include flexBox(row,space-between,center,0);
+        height: 80px;
+        input{
+            height: 35px;
+            width:350px;
+            border-radius:5px;
+            background-color: rgb(251, 250, 250,0.88);
+            border: 1px solid $boarder; 
+            padding: 0 3px;
+            outline: none
+        }
+        ul{
+            @include flexBox(row,space-between,center,40px);
+            list-style: none;
+            li{
+                position: relative;
+                cursor: pointer;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .active{
+                    border-bottom:2px solid black;
+                }
+                .quantity{
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    @include flexBox(row,center,center,40px);
+                    border-radius: 50%;
+                    background-color: red;
+                    color: white;
+                    font-size: 12px;
+                    top: -12px;
+                    right: -12px;
+                }
+            }
+        }
+    }
+}
+
+.card{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    @include flexBox(column,space-evenly,center,0);
+    border:1px solid $boarder ;
+    border-radius: 5px;
+    padding: 3px;
+    img{
+        width:200px;
+        margin: 5px;
+        cursor: pointer;
+        transition: all ease-in-out .5s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .discprition{
+        z-index: 9;
+        @include flexBox(column,center,start,6px);
+        h4{
+            width: 240px;
+        }
+
+        .rating{
+            background-color: green;
+            @include flexBox(row,start,center,0);
+            padding:0 6px 0 3px;
+            height: 35px;
+            border-radius: 5px;
+            img{
+                width: 20px;
+                height: fit-content;
+            }
+            p{
+                color: white;
+            }
+        }
+    }
+    .favourite{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+        color: rgb(194, 194, 194);
+        z-index: 9px;
+        padding: 3px;
+        transition: all ease-in-out .2s;
+        &:active{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.emty_favorites,.emty_cart{
+    @include flexBox(row,center,center,6px);
+    min-height: calc(100vh - 80px);
+    .emty{
+        border: 2px solid black;
+        border-radius:3px;
+        h2{
+            padding: 20px 30px;
+        }
+    }
+}
+
+
+
+.cardskeleton{
+    width: 100%;
+    @include flexBox(column,space-between,center,6px);
+    padding-bottom:20px;
+    .imgskeleton{
+        width: 100%;
+        height: 220px;
+        background-color: rgb(207, 205, 205);
+        border-radius: 5px;
+        animation: skeleton-loading .5s linear infinite alternate;
+    }
+    .paragraphskeleton{
+        width: 100%;
+        height: 25px;
+        background-color:rgb(207, 205, 205) ;
+        border-radius: 5px;
+        animation: skeleton-loading .5s linear infinite alternate;
+    }
+}
+
+.productskeleton{
+    @include flexBox(row,start,center,20px);
+    .imagediv{
+        width: 450px;
+        height: 500px;
+        background-color:rgb(207, 205, 205) ;
+        animation: skeleton-loading .5s linear infinite alternate;
+        border-radius: 7px;
+    }
+    .description{
+        @include flexBox(column,center,center,10px);
+        .titile{
+            border-radius: 7px;
+            width: 700px;
+            height: 50px;
+            background-color:rgb(207, 205, 205) ;
+            animation: skeleton-loading .5s linear infinite alternate;
+        }
+    }
+
+}
+
+  
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(0, 6%, 88%);
+    }
+    100% {
+      background-color: hsl(0, 1%, 76%);
+    }
+  }
+
+.home, .favorite{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 6px;
+    justify-content: space-between;
+}
+
+
+.product{
+    min-height: calc(100vh - 80px);
+    @include flexBox(row,start,center,0);
+    .container{
+        @include flexBox(row,start,center,70px);
+        img{
+            width: 400px;
+        }
+
+        .description{
+            @include flexBox(column,start,start,10px);
+            .rating{
+                @include flexBox(row,start,center,4px);
+                img{
+                    width: 150px;
+                }
+                p{
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+            }
+
+            .addandbybtns{
+                @include flexBox(row,start,center,5px);
+                button{
+                    width: 200px;
+                    height: 40px;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+                button:nth-child(1){
+                    background-color: rgb(17, 17, 17);
+                    color: white;
+                    @include flexBox(row,center,center,5px);
+                    
+                }
+                button:nth-child(2){
+                    background-color: white;
+                    border: 1px solid black;
+                    color: black;
+                }
+            }
+        }
+    }
+
+}
+.cart{
+    @include flexBox(row,none,start,5px);
+    .cart_container{
+        max-width: 550px;
+        @include flexBox(column,none,none,5px);
+    }
+    .cart_total{
+        @include flexBox(column,none,none,9px);
+        border: 1px solid $boarder;
+        border-radius: 5px;
+        padding: 5px ;
+    }
+}
+
+.cartcard{
+    @include flexBox(row,space-between,center,0);
+    border: 1px solid $boarder;
+    padding: 5px 15px;
+    img{
+        width: 200px;
+    }
+    .description{
+        @include flexBox(column,none,end,5px);
+        .btns{
+            @include flexBox(row,none,end,5px);
+            button{
+                background-color: black;
+                color: white;
+                padding: 9px;
+                border: none;
+                border-radius: 5px;
+            }
+            button:nth-child(1),button:nth-child(3){
+                width: 40px;
+            }
+        }
+    }
+}

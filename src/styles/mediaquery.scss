@@ -1,0 +1,50 @@
+@import "mixin.scss";
+
+@media(max-width:890px){
+    .product{
+        .container{
+            @include flexBox(column,start,center,0)
+        }
+    }
+
+    .productskeleton{
+       width: 100%;
+        @include flexBox(column,start,start,5px);
+        .imagediv{
+            max-width: 700px;
+            width: 100%;
+            height:500px ;
+        }
+        .description{
+            width: 100%;
+            @include flexBox(column,center,start,5px);
+            .titile{
+                max-width: 450px;
+                width: 100%;
+                height: 60px;
+            }
+            
+        }
+    }
+}
+
+@media(max-width:454px){
+    .product{
+        .container{
+            @include flexBox(column,center,center,0);
+            img{
+                width: 340px;
+            }
+            .description{
+                .addandbybtns{
+                    @include flexBox(column,center,center,5px);
+                    width:100%;
+                    button{
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
