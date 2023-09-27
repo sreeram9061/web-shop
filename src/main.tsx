@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from './store.ts'
 import { BrowserRouter } from 'react-router-dom'
 import {ApiProvider} from "@reduxjs/toolkit/query/react"
-import { endPointsDatas } from './redux/endPoints.ts'
+import { endPointsDatas } from './redux/endpoints.ts'
 import "./styles/index.scss"
 import "./styles/mediaquery.scss"
 

@@ -1,4 +1,4 @@
-import { ProductType, useGetSingleProductQuery } from '../redux/endPoints'
+import { ProductType, useGetSingleProductQuery } from '../redux/endpoints'
 import {useParams} from "react-router-dom"
 import ProductSkeleton from './../components/ProductSkeleton';
 import { useAppDispatch, useAppSelector } from '../store';

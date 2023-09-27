@@ -1,4 +1,4 @@
-import { ProductType } from '../redux/endPoints';
+import { ProductType } from '../redux/endpoints';
 import {useNavigate} from "react-router-dom";
 import { AiFillHeart } from "react-icons/ai";
 import { useRef}from"react"
