@@ -13,7 +13,7 @@ type ProductType={
     }
 }
 
-export const endpointsDatas=createApi({
+const endpointsDatas=createApi({
     baseQuery:fetchBaseQuery({baseUrl:"https://fakestoreapi.com/"}),
     endpoints:(builder)=>({
         endpointsDatasGetProducts:builder.query<ProductType[], void>({
@@ -24,5 +24,7 @@ export const endpointsDatas=createApi({
         })
     })  
 })
+
+export default endpointsDatas
 
 export const {useEndpointsDatasGetProductsQuery,useEndpointsDatasGetSingleProductQuery}=endpointsDatas

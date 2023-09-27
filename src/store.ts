@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit"
 import favoriteReducer from './redux/favorites';
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { endpointsDatas } from "./redux/endpoints";
+import endpointsDatas from "./redux/endpoints";
 import cartReducer from "./redux/cart";
 
 export const store = configureStore({
