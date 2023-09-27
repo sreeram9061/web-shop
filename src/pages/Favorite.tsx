@@ -1,4 +1,4 @@
-import { useAppSelector } from '../store'
+import { useAppSelector } from '../store/store'
 import Card from '../components/Card'
 import Emty from '../components/Emty'
 

@@ -1,8 +1,8 @@
-import { useEndpointsDatasGetSingleProductQuery } from "../Redux/endpoints";
+import { useEndpointsDatasGetSingleProductQuery } from "../store/endpoints";
 import {useParams} from "react-router-dom"
 import ProductSkeleton from './../components/ProductSkeleton';
-import { useAppDispatch, useAppSelector } from '../store';
-import { addToCart } from '../Redux/cart';
+import { useAppDispatch, useAppSelector } from '../store/store';
+import { addToCart } from '../store/cart';
 import { BsFillCartPlusFill,BsCartCheckFill } from "react-icons/bs";
 
 const rewrite=(arg:number)=>{

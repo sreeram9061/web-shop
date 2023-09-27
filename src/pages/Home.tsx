@@ -1,6 +1,6 @@
 import Card from '../components/Card'
 import CardSkeleton from '../components/CardSkeleton'
-import { useEndpointsDatasGetProductsQuery } from '../Redux/endpoints'
+import { useEndpointsDatasGetProductsQuery } from '../store/endpoints'
 
 type ProductType={
   id: number,

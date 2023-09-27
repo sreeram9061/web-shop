@@ -1,5 +1,5 @@
-import { CartItemType, dicreaceCartItem, increaceCartItem, removeCartItem } from '../Redux/cart'
-import { useAppDispatch } from '../store'
+import { CartItemType, dicreaceCartItem, increaceCartItem, removeCartItem } from '../store/cart'
+import { useAppDispatch } from '../store/store'
 
 
 const Cartcard = ({data}:{data:CartItemType}) => {

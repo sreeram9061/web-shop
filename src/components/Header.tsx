@@ -1,4 +1,4 @@
-import { useAppSelector } from '../store'
+import { useAppSelector } from '../store/store'
 import Wrapper from './Wrapper'
 import {NavLink, useNavigate} from "react-router-dom"
 
