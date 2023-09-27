@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAppSelector } from '../store'
 import Card from '../components/Card'
 import Emty from '../components/Emty'

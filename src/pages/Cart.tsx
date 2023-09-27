@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAppSelector } from '../store'
 import Emty from '../components/Emty'
 import Cartcard from '../components/Cartcard'

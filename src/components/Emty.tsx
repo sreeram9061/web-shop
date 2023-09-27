@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Emty = ({section}:{section:string}) => {
   return (
     <div className='emty'>

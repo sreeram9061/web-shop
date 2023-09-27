@@ -1,4 +1,3 @@
-import React from 'react'
 import { CartItemType, dicreaceCartItem, increaceCartItem, removeCartItem } from '../redux/cart'
 import { useAppDispatch } from '../store'
 
