@@ -17,7 +17,6 @@ export type CartItemType={
     item:ProductType,
     quantity:number
 }
-
 type StateType={
     cartItems:CartItemType[]
 }
