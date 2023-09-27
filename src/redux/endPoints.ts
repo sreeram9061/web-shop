@@ -1,6 +1,6 @@
 import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react"
 
-export type ProductType={
+type ProductType={
     id: number,
     title: string,
     price: number,
@@ -13,7 +13,7 @@ export type ProductType={
     }
 }
 
-export const endPointsDatas=createApi({
+export const endpointsDatas=createApi({
     baseQuery:fetchBaseQuery({baseUrl:"https://fakestoreapi.com/"}),
     endpoints:(builder)=>({
         getProducts:builder.query<ProductType[], void>({
@@ -25,4 +25,4 @@ export const endPointsDatas=createApi({
     })  
 })
 
-export const {useGetProductsQuery,useGetSingleProductQuery}=endPointsDatas
+export const {useGetProductsQuery,useGetSingleProductQuery}=endpointsDatas

@@ -1,4 +1,4 @@
-import { ProductType, useGetSingleProductQuery } from '../redux/endpoints'
+import {useGetSingleProductQuery } from '../redux/endpoints'
 import {useParams} from "react-router-dom"
 import ProductSkeleton from './../components/ProductSkeleton';
 import { useAppDispatch, useAppSelector } from '../store';
@@ -14,6 +14,19 @@ const rewrite=(arg:number)=>{
       return rate-rate%.5
   }
 }
+}
+
+type ProductType={
+  id: number,
+  title: string,
+  price: number,
+  description: string,
+  category: string,
+  image: string,
+  rating: {
+      rate: number,
+      count: number
+  }
 }
 
 const Product = () => {

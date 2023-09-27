@@ -1,5 +1,17 @@
 import { createSlice} from "@reduxjs/toolkit"
-import { ProductType } from "./endpoints"
+
+type ProductType={
+    id: number,
+    title: string,
+    price: number,
+    description: string,
+    category: string,
+    image: string,
+    rating: {
+        rate: number,
+        count: number
+    }
+  }
 
 export type CartItemType={
     item:ProductType,

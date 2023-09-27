@@ -1,10 +1,21 @@
-import { ProductType } from '../redux/endpoints';
 import {useNavigate} from "react-router-dom";
 import { AiFillHeart } from "react-icons/ai";
 import { useRef}from"react"
 import { useAppDispatch, useAppSelector } from '../store';
 import { addToFavoriteItem, removeFavoriteItem } from '../redux/favorites';
 
+type ProductType={
+  id: number,
+  title: string,
+  price: number,
+  description: string,
+  category: string,
+  image: string,
+  rating: {
+      rate: number,
+      count: number
+  }
+}
 
 
 const Card = ({data}:{data:ProductType}) => {

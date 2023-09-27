@@ -1,7 +1,6 @@
 import Card from '../components/Card'
 import CardSkeleton from '../components/CardSkeleton'
-import { ProductType, useGetProductsQuery } from '../redux/endpoints'
-
+import {useGetProductsQuery } from '../redux/endpoints'
 
 const Home = () => {
     const{data,isLoading,isFetching,isError}= useGetProductsQuery()
