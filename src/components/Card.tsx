@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom";
 import { AiFillHeart } from "react-icons/ai";
 import { useRef}from"react"
 import { useAppDispatch, useAppSelector } from '../store';
-import { addToFavoriteItem, removeFavoriteItem } from '../redux/favorites';
+import { addToFavoriteItem, removeFavoriteItem } from '../Redux/favorites';
 
 type ProductType={
   id: number,

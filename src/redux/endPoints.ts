@@ -26,5 +26,4 @@ const endpointsDatas=createApi({
 })
 
 export default endpointsDatas
-
 export const {useEndpointsDatasGetProductsQuery,useEndpointsDatasGetSingleProductQuery}=endpointsDatas

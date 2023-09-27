@@ -1,4 +1,4 @@
-import { CartItemType, dicreaceCartItem, increaceCartItem, removeCartItem } from '../redux/cart'
+import { CartItemType, dicreaceCartItem, increaceCartItem, removeCartItem } from '../Redux/cart'
 import { useAppDispatch } from '../store'
 
 
