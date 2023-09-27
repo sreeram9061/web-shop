@@ -1,4 +1,4 @@
-import { useGetSingleProductQuery } from "../redux/endpoints";
+import { useEndpointsDatasGetSingleProductQuery } from "../redux/endpoints";
 import {useParams} from "react-router-dom"
 import ProductSkeleton from './../components/ProductSkeleton';
 import { useAppDispatch, useAppSelector } from '../store';
@@ -37,7 +37,7 @@ const Product = () => {
     }
     const {id}=useParams<idType>()
 
-    const{data,isLoading,isFetching,isError}=useGetSingleProductQuery(parseInt(id as string))
+    const{data,isLoading,isFetching,isError}=useEndpointsDatasGetSingleProductQuery(parseInt(id as string))
     const cartItems=useAppSelector(state=>state.cartReducer.cartItems)
 
     const handlCart=(arg:ProductType)=>{

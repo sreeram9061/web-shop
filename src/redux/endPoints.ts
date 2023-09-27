@@ -16,13 +16,13 @@ type ProductType={
 export const endpointsDatas=createApi({
     baseQuery:fetchBaseQuery({baseUrl:"https://fakestoreapi.com/"}),
     endpoints:(builder)=>({
-        getProducts:builder.query<ProductType[], void>({
+        endpointsDatasGetProducts:builder.query<ProductType[], void>({
             query:()=> "products"
         }),
-        getSingleProduct:builder.query<ProductType,number>({
+        endpointsDatasGetSingleProduct:builder.query<ProductType,number>({
             query:(id)=> `products/${id}`
         })
     })  
 })
 
-export const {useGetProductsQuery,useGetSingleProductQuery}=endpointsDatas
+export const {useEndpointsDatasGetProductsQuery,useEndpointsDatasGetSingleProductQuery}=endpointsDatas
