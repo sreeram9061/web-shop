@@ -1,6 +1,19 @@
 import Card from '../components/Card'
 import CardSkeleton from '../components/CardSkeleton'
-import {useGetProductsQuery } from '../redux/endpoints'
+import {useGetProductsQuery} from '../redux/endpoints'
+
+type ProductType={
+  id: number,
+  title: string,
+  price: number,
+  description: string,
+  category: string,
+  image: string,
+  rating: {
+      rate: number,
+      count: number
+  }
+}
 
 const Home = () => {
     const{data,isLoading,isFetching,isError}= useGetProductsQuery()
@@ -10,7 +23,7 @@ const Home = () => {
   return (
     <div className='home' style={isError?{display:"flex",justifyContent:"center",alignItems:"center",minHeight:"80vh"}:{}}>
       <>
-      {(isLoading||isFetching? Array.from(new Array(20)): data)?.map((item,i)=>{
+      {(isLoading||isFetching? Array.from(new Array(20)): data)?.map((item:ProductType,i:number)=>{
         
         if(!item){
           return <CardSkeleton key={i}/>
